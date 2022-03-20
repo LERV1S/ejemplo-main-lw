@@ -23,7 +23,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 Route::get('bienvenida', function(){
     return view('bienvenida');
-});
+})->middleware('auth');
 
 Route::get('contacto', function(){
     return view('contacto');
